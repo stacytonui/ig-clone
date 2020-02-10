@@ -6,12 +6,17 @@
 
         <div class="col-3 p-5">
 
-            <img src="/storage/{{$user->profile->image}}" class="rounded-circle w-100">
+            <img src="{{$user->profile->profileImage()}}" class="rounded-circle w-100">
         </div>
-        <div class="col-9 p-5">
+        <div class="col-9 pt-5">
         <div class="d-flex justify-content-between align-items-baseline">
 
-            <h1>{{ $user ->username}}</h1>
+
+
+            <div class="d-flex align-items-center pb-4">
+                <div class="h4">{{ $user ->username}}</div>
+                <follow-button user-id="{{ $user->id }}"></follow-button>
+            </div>
 
             @can ('update',$user->profile)
                 <a href="/p/create">Add New Post</a>
