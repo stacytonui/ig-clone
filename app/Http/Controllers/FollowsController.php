@@ -9,7 +9,7 @@ class FollowsController extends Controller
 {
     public function store(User $user)
     {
-        return $user->username;
+
 
     }
 }

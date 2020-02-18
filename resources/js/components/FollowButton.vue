@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <button class="btn btn-primary ml-4" @click="followUser">Follow</button>
+        <button class="btn btn-primary ml-4" @click="followUser()">Follow</button>
 
     </div>
 </template>
@@ -14,10 +14,7 @@
 
         methods: {
             followUser(){
-                axios.post('follow/' + this.userId)
-                    .then(response =>{
-                       alert(response.data);
-                    });
+              console.log('hey');
             }
         }
     }
